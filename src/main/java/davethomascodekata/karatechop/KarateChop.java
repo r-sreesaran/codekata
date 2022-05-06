@@ -18,11 +18,8 @@ public class KarateChop {
             if(item == data[mid]) {
                 return  mid;
             }
-            else if (start==end) {
-                return -1;
-            }
             if (item<=data[mid]) {
-                end = mid;
+                end = mid-1;
             }
             if (item>= data[mid]) {
                 start = mid+1;
