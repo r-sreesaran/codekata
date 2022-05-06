@@ -8,13 +8,18 @@ public class KarateChop {
         if (data.length==0) {
             return -1;
         }
+
         Arrays.sort(data);
         int start = 0;
         int end = data.length-1;
         int mid = Integer.valueOf((end - start)/2);
-        while (start != end || start > end) {
+        while (start <= end) {
+
             if(item == data[mid]) {
                 return  mid;
+            }
+            else if (start==end) {
+                return -1;
             }
             if (item<=data[mid]) {
                 end = mid;
@@ -22,7 +27,7 @@ public class KarateChop {
             if (item>= data[mid]) {
                 start = mid+1;
             }
-            mid = Integer.valueOf((end - start)/2);
+            mid = Integer.valueOf((end + start)/2);
         }
         return -1;
     }
