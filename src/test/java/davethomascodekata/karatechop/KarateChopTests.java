@@ -7,7 +7,7 @@ import org.junit.Test;
 import  davethomascodekata.karatechop.KarateChop;
 
 public class KarateChopTests {
-    KarateChop instance = new KarateChop();
+    KarateChop1 instance = new KarateChop1();
     
     @Test
     public void testSearch(){
